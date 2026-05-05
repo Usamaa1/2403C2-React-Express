@@ -6,8 +6,8 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
-
-import { BootstrapLayout } from './BootstrapLayout/BootstrapLayout'
+import TailwindLayout from './TailwindLayout/TailwindLayout'
+// import { BootstrapLayout } from './BootstrapLayout/BootstrapLayout'
 import { HomeComponent } from './Pages/Home'
 import { Contact } from './Pages/Contact'
 import { Services } from './Pages/Services'
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     // element: <div>Hello World</div>,
-    Component: BootstrapLayout,
+    Component: TailwindLayout,
     children: [
       {
         index: true,
@@ -42,6 +42,35 @@ const router = createBrowserRouter([
 
 
 ]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     // element: <div>Hello World</div>,
+//     Component: BootstrapLayout,
+//     children: [
+//       {
+//         index: true,
+//         Component: HomeComponent
+//       },
+//       {
+//         path: 'contact',
+//         Component: Contact
+//       },
+//       {
+//         path: 'services',
+//         Component: Services
+//       },
+//       {
+//         path: 'careers',
+//         Component: Careers
+//       },
+//     ]
+//   },
+
+
+
+
+// ]);
 
 
 createRoot(document.getElementById('root')).render(
