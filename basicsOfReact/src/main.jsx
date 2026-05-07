@@ -12,6 +12,8 @@ import { HomeComponent } from './Pages/Home'
 import { Contact } from './Pages/Contact'
 import { Services } from './Pages/Services'
 import { Careers } from './Pages/Careers'
+import { MyUseState } from './Utlities/Hooks/MyUseState/MyUseState';
+import { MyUseEffect } from './Utlities/Hooks/MyUseEffect/MyUseEffect';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: 'careers',
         Component: Careers
+      },
+      {
+        path: 'useState',
+        Component: MyUseState
+      },
+      {
+        path: 'useEffect',
+        Component: MyUseEffect
       },
     ]
   },
@@ -79,25 +89,6 @@ createRoot(document.getElementById('root')).render(
 
 
     <RouterProvider router={router} ></RouterProvider>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     {/* 
     <P title='First Title' description='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aspernatur corporis qui. Cum, accusantium voluptatibus illum sunt commodi tempore, eveniet labore est nihil quibusdam possimus inventore ipsam, error recusandae accusamus.' link='https://www.google.com' linkText='Google'></P>
