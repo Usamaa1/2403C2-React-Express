@@ -14,6 +14,8 @@ import { Services } from './Pages/Services'
 import { Careers } from './Pages/Careers'
 import { MyUseState } from './Utlities/Hooks/MyUseState/MyUseState';
 import { MyUseEffect } from './Utlities/Hooks/MyUseEffect/MyUseEffect';
+import { MyForms } from './Utlities/Forms/MyForms';
+import { MyUseRef } from './Utlities/Hooks/MyUseRef/MyUseRef';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
       {
         path: 'useEffect',
         Component: MyUseEffect
+      },
+      {
+        path: 'myForms',
+        Component: MyForms
+      },
+      {
+        path: 'useRef',
+        Component: MyUseRef
       },
     ]
   },
