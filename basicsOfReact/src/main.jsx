@@ -17,6 +17,7 @@ import { MyUseEffect } from './Utlities/Hooks/MyUseEffect/MyUseEffect';
 import { MyForms } from './Utlities/Forms/MyForms';
 import { MyUseRef } from './Utlities/Hooks/MyUseRef/MyUseRef';
 import { RestoreForm } from './Utlities/Forms/RestoreForm';
+import { FirstAPI } from './Utlities/API\'s/FirstAPI';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: 'restoreForm',
         Component: RestoreForm
+      },
+      {
+        path: 'firstApi',
+        Component: FirstAPI
       },
     ]
   },
