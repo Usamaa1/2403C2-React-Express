@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 
 export const FirstAPI = () => {
 
-
     const [posts, setPosts] = useState([]);
 
     const getPosts = async () => {
@@ -16,16 +15,9 @@ export const FirstAPI = () => {
         }
     };
 
-
     useEffect(() => {
         getPosts();
     }, [])
-
-
-
-
-
-
 
     return (
         <div>

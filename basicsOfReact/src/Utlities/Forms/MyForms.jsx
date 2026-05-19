@@ -31,6 +31,7 @@ export const MyForms = () => {
                         <label htmlFor="company" className="block mb-2.5 text-sm font-medium text-heading">Age</label>
                         <input type="text" id="company" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Flowbite" required  onChange={(e)=> setZain({...zain,age:e.target.value})} />
                     </div>
+                
                     
                 </div>
                 <button type="submit" className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">Submit</button>

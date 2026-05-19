@@ -8,6 +8,9 @@ export const RestoreForm = () => {
 
 
 
+
+
+
     console.log(formData)
 
     useEffect(()=>{
@@ -34,6 +37,14 @@ export const RestoreForm = () => {
                     <div>
                         <label htmlFor="company" className="block mb-2.5 text-sm font-medium text-heading">Age</label>
                         <input type="text" id="company" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Flowbite" required value={formData?.age} onChange={(e)=> setFormData({...formData,age:e.target.value})} />
+                  
+                    </div>
+                    <div>
+                        <label htmlFor="company" className="block mb-2.5 text-sm font-medium text-heading">Age</label>
+                        <input type="file" id="company" onChange={(e)=> setFormData({...formData,img:URL.createObjectURL(e.target.files[0])})} />
+                    </div>
+                    <div>
+                        <img src={formData?.img} width={100} />
                     </div>
                     
                 </div>
