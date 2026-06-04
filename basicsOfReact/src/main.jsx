@@ -18,6 +18,8 @@ import { MyForms } from './Utlities/Forms/MyForms';
 import { MyUseRef } from './Utlities/Hooks/MyUseRef/MyUseRef';
 import { RestoreForm } from './Utlities/Forms/RestoreForm';
 import { FirstAPI } from './Utlities/API\'s/FirstAPI';
+import { MyReactHookForm } from './Utlities/Hooks/MyReactHookForm/MyReactHookForm';
+import { ImagePage } from './Pages/ImagePage';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +66,14 @@ const router = createBrowserRouter([
       {
         path: 'firstApi',
         Component: FirstAPI
+      },
+      {
+        path: 'reactHookForm',
+        Component: MyReactHookForm
+      },
+      {
+        path: 'imagePage',
+        Component: ImagePage
       },
     ]
   },
