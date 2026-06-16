@@ -5,6 +5,9 @@ import ejs from 'ejs';
 const app = express();
 const port = 3000;
 
+
+app.use(express.json());
+
 app.set('view engine','ejs')
 
 
@@ -61,6 +64,64 @@ app.get('/home',(req,res)=>{
 app.get('/home2',(req,res)=>{
   res.render('index');
 })
+
+
+
+app.post('/students',(req,res)=>{
+
+
+// const data = req.body;
+
+// let studentName = req.body.studentName;
+// let studentEmail = req.body.studentEmail;
+
+const {studentName,studentEmail,studentClass} = req.body
+
+console.log(studentName,studentEmail,studentClass);
+
+res.send({studentEmail,studentName,studentClass})
+
+
+
+});
+
+
+
+app.post('/account/:id/:name',(req,res)=>{
+
+
+  const data = req.params;
+
+  // const {id,name} = req.params;
+
+  console.log(data);
+
+  res.send(data)
+
+
+})
+app.post('/shop',(req,res)=>{
+
+
+  const data = req.query;
+
+  console.log(data);
+
+  res.send(data)
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 
