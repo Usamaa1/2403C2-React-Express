@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path'
 import ejs from 'ejs';
+import userRoute from './Routes/UserRoute.mjs';
 
 const app = express();
 const port = 3000;
@@ -113,7 +114,7 @@ app.post('/shop',(req,res)=>{
 })
 
 
-
+app.use('/api/v1',userRoute)
 
 
 
