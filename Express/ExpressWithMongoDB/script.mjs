@@ -1,8 +1,12 @@
 import express from 'express';
 import studentRouter from './routes/studentRoutes.mjs';
+import mailRouter from './routes/mailRoutes.mjs';
+import 'dotenv/config'
+import imageRouter from './routes/imageRoutes.mjs';
+
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(express.json());
 
@@ -12,6 +16,10 @@ app.get('/', (req, res) => {
 
 
 app.use('/api/v1/student',studentRouter);
+
+app.use('/api/v1',mailRouter);
+
+app.use('/api/v1',imageRouter)
 
 
 
