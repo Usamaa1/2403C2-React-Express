@@ -3,6 +3,7 @@ import studentRouter from './routes/studentRoutes.mjs';
 import mailRouter from './routes/mailRoutes.mjs';
 import 'dotenv/config'
 import imageRouter from './routes/imageRoutes.mjs';
+import authRouter from './routes/authRoutes.mjs';
 
 
 const app = express();
@@ -19,7 +20,9 @@ app.use('/api/v1/student',studentRouter);
 
 app.use('/api/v1',mailRouter);
 
-app.use('/api/v1',imageRouter)
+app.use('/api/v1',imageRouter);
+
+app.use('/api/v1',authRouter);
 
 
 
