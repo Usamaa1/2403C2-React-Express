@@ -3,6 +3,9 @@ import 'dotenv/config'
 
 import { main } from './connection/connection.mjs'
 import productRoute from './routes/productRoutes.mjs';
+import postRoute from './routes/PostRoutes.mjs';
+import employeeRoute from './routes/EmployeeRoutes.mjs';
+import orderRoute from './routes/orderRoutes.mjs';
 
 
 const app = express();
@@ -17,6 +20,9 @@ app.get('/', (req, res) => {
 
 
 app.use('/api/v1',productRoute);
+app.use('/api/v1',postRoute);
+app.use('/api/v1',employeeRoute);
+app.use('/api/v1',orderRoute);
 
 
 
