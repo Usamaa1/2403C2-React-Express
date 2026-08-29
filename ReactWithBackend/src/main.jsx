@@ -7,6 +7,7 @@ import { Layout } from './layout/Layout';
 import './index.css'
 import { ViewProduct } from './Component/ProductsComponent/ViewProduct';
 import { AddProduct } from './Component/ProductsComponent/AddProduct';
+import ImageUploadComponent from './Component/ImageUploadComponent/ImageUploadComponent';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
        path: 'addProduct',
         Component: AddProduct
+      },
+      {
+       path: 'imageUpload',
+        Component: ImageUploadComponent
       },
     ]
   },
